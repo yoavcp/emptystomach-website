@@ -33,13 +33,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 70px;
 }
 
 .photo-content {
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .photo-title {
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,8 +63,9 @@ body {
 }
 
 .photo {
-    width: 70%;
+    max-width: 70%;
     height: auto;
+    min-width: 1000px;
 }
 
 .cover-art {
@@ -70,7 +73,41 @@ body {
     height: auto;
 }
 
+.music-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
+}
+
+.music-content {
+    padding: 20px;
+}
+
+.music-title {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .footer-text {
-    margin: 50px 10px 10px 10px;
+    margin: 50px 10px 30px 10px;
     justify-content: center;
 }
