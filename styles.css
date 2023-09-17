@@ -7,18 +7,22 @@
     user-select: none;
 }
 
+img {
+    user-select: none;
+}
+
 nav {
     padding: 25px;
-    width: 100%;
     top: 0;
     background-color: rgba(248, 245, 232, 255);
+    display: flex;
+    justify-content: center;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 li {
@@ -28,8 +32,16 @@ li {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: black;
+}
+
+a:hover {
+    color: dimgray;
+}
+
+a:active {
     font-weight: bold;
+    color: black;
 }
 
 .sticky {
@@ -51,11 +63,13 @@ body {
     width: 100%;
 }
 
-.main-buttons {
+.video-item {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 70px;
+    width: 70%;
 }
 
 .photo-item {
@@ -64,10 +78,12 @@ body {
     align-items: center;
     justify-content: center;
     padding: 70px;
+    width: 70%;
 }
 
 .photo-content {
     padding-top: 20px;
+
 }
 
 .photo-title {
@@ -93,14 +109,18 @@ body {
 }
 
 .photo {
-    max-width: 70%;
+    max-width: 100%;
+    width: 100%;
     height: auto;
-    min-width: 1000px;
 }
 
 .cover-art {
     width: 500px;
     height: auto;
+}
+
+.cover-art:hover {
+    filter: saturate(150%);
 }
 
 .music-item {
@@ -137,7 +157,52 @@ body {
     justify-content: center;
 }
 
+.music-grid {
+    padding-top: 50px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.music-grid-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.music-grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
 .footer-text {
     margin: 50px 10px 30px 10px;
     justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+    .music-grid {
+        width: 100%;
+        justify-content: flex-start;
+        align-content: flex-start;
+    }
+
+    .music-grid-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .video-item,
+    .music-item {
+        width: 70%;
+        padding: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
 }
